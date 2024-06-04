@@ -22,7 +22,7 @@ contract MyToken {
 
     // Public variables to store token details
     string public name = "MyTokenName";
-    string public symbol = "MTN";
+    string public tokenAbbrev = "MTN";
     uint256 public totalSupply;
 
     // Mapping to store balances
