@@ -21,8 +21,8 @@ pragma solidity ^0.8.18;
 contract MyToken {
 
     // Public variables to store token details
-    string public name = "MyToken";
-    string public symbol = "MTK";
+    string public name = "MyTokenName";
+    string public symbol = "MTN";
     uint256 public totalSupply;
 
     // Mapping to store balances
