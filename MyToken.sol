@@ -1,6 +1,6 @@
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
+
 /*
        REQUIREMENTS
     1. Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
@@ -15,11 +15,7 @@ pragma solidity ^0.8.18;
        to the amount that is supposed to be burned.
 */
 
-
-
-
 contract MyToken {
-
     // Public variables to store token details
     string public name = "MyTokenName";
     string public tokenAbbrev = "MTN";
@@ -30,17 +26,15 @@ contract MyToken {
 
     // Mint function to create new tokens
     function mint(address _address, uint256 value) public {
-        
         balances[_address] += value;
         totalSupply += value;
     }
 
     // Burn function to destroy tokens
     function burn(address _address, uint256 value) public {
-   if(balances[_address] >= value){
-
-        balances[_address] -= value;
-        totalSupply -= value;
-   }
+        if (balances[_address] >= value) {
+            balances[_address] -= value;
+            totalSupply -= value;
+        }
     }
 }
